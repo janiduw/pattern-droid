@@ -1,4 +1,4 @@
-package janiduw.com.patterndroid;
+package janiduw.com.patterndroid.droid;
 
 import java.util.ArrayList;
 import java.util.List;

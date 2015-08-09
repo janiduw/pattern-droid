@@ -3,7 +3,7 @@ package janiduw.com.patterndroid.strategy;
 import org.junit.Before;
 import org.junit.Test;
 
-import janiduw.com.patterndroid.Droid;
+import janiduw.com.patterndroid.droid.Droid;
 
 import static org.junit.Assert.assertEquals;
 

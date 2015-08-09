@@ -3,8 +3,8 @@ package janiduw.com.patterndroid.observer;
 import org.junit.Before;
 import org.junit.Test;
 
-import janiduw.com.patterndroid.Droid;
-import janiduw.com.patterndroid.IDroid;
+import janiduw.com.patterndroid.droid.Droid;
+import janiduw.com.patterndroid.droid.IDroid;
 
 import static junit.framework.Assert.assertTrue;
 import static junit.framework.Assert.fail;

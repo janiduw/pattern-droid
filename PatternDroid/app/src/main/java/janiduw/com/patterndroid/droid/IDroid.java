@@ -1,4 +1,4 @@
-package janiduw.com.patterndroid;
+package janiduw.com.patterndroid.droid;
 
 import janiduw.com.patterndroid.observer.DroidObserver;
 
