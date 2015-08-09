@@ -25,8 +25,9 @@ public class DroidObserverTest {
     }
 
     @Test
-    public void testUpdateBatteryStatus() throws Exception {
+    public void testAddBatteryStatusObserver() throws Exception {
 
+        // Create a new observer
         DroidObserver observer = new DroidObserver() {
             @Override
             public void updateBatteryStatus(float batteryLevel) {
@@ -34,17 +35,25 @@ public class DroidObserverTest {
             }
         };
 
+        // Register the observer
         droid.registerObserver(observer);
         droid.notifyBatteryStatus(BATTERY_LEVEL);
+    }
 
-        observer = new DroidObserver() {
+    @Test
+    public void testRemoveBatteryStatusObserver() throws Exception {
+
+        DroidObserver observer = new DroidObserver() {
             @Override
             public void updateBatteryStatus(float batteryLevel) {
                 fail("Should not be called when the observer is removed");
             }
         };
 
+        // Register the observer
         droid.registerObserver(observer);
+
+        // Remove the observer
         droid.removeObserver(observer);
         droid.notifyBatteryStatus(BATTERY_LEVEL);
     }

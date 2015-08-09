@@ -3,11 +3,13 @@ package janiduw.com.patterndroid;
 import java.util.ArrayList;
 import java.util.List;
 
+import janiduw.com.patterndroid.decorator.Warrior;
 import janiduw.com.patterndroid.observer.DroidObserver;
 import janiduw.com.patterndroid.strategy.DanceBehavior;
 
 /**
- * Droid made with different design patterns
+ * Droid made with different abilities (Powered by GoF design patterns)
+ * "Beep Bloop Blop Bleep Boop - R2-D2 Star Wars (1977)"
  * Created by janidu on 27/4/15.
  */
 public class Droid implements IDroid {
@@ -15,6 +17,7 @@ public class Droid implements IDroid {
     private String name;
     private DanceBehavior danceBehavior;
     private List<DroidObserver> observers;
+    private Warrior warrior;
 
     public Droid() {
         observers = new ArrayList<>();
@@ -32,10 +35,7 @@ public class Droid implements IDroid {
 
     @Override
     public void removeObserver(DroidObserver droidObserver) {
-        int index = observers.indexOf(droidObserver);
-        if (index >= -1) {
-            observers.remove(index);
-        }
+        observers.remove(droidObserver);
     }
 
     @Override
@@ -59,5 +59,13 @@ public class Droid implements IDroid {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public Warrior getWarrior() {
+        return warrior;
+    }
+
+    public void setWarrior(Warrior warrior) {
+        this.warrior = warrior;
     }
 }
