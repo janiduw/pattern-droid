@@ -1,5 +1,7 @@
 package janiduw.com.patterndroid.factory;
 
+import janiduw.com.patterndroid.decorator.KarateWarrior;
+import janiduw.com.patterndroid.decorator.SamuraiWarrior;
 import janiduw.com.patterndroid.decorator.Warrior;
 import janiduw.com.patterndroid.droid.AndroDroid;
 import janiduw.com.patterndroid.droid.Droid;
@@ -11,7 +13,7 @@ import janiduw.com.patterndroid.droid.IDroid;
  * it's a fundamental part of Java. The real culprit is our old friend CHANGE - Head First Design Patterns"
  * Created by Janidu on 8/9/15.
  */
-public class DroidFactory extends AbstractFactory {
+public class WarriorFactory extends AbstractFactory {
 
     /**
      * Creates droids
@@ -36,7 +38,18 @@ public class DroidFactory extends AbstractFactory {
 
     @Override
     Warrior createWarrior(WarriorType warriorType) {
-        return null;
+        Warrior warrior = null;
+        switch (warriorType) {
+            case KARATE:
+                warrior = new KarateWarrior();
+                break;
+            case SAMURAI:
+                warrior = new SamuraiWarrior();
+                break;
+            default:
+                break;
+        }
+        return warrior;
     }
 }
 

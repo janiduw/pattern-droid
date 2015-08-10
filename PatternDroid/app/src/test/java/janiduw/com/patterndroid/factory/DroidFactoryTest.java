@@ -15,20 +15,20 @@ import static org.junit.Assert.assertTrue;
  */
 public class DroidFactoryTest {
 
-    private DroidFactory droidFactory;
+    private AbstractFactory abstractFactory;
 
     @Before
     public void setup() {
-        droidFactory = new DroidFactory();
+        abstractFactory = new DroidFactory();
     }
 
     @Test
     public void testCreateAndroDroid() {
-        assertTrue(droidFactory.createDroid(DroidModel.ANDROID) instanceof AndroDroid);
+        assertTrue(abstractFactory.createDroid(DroidModel.ANDROID) instanceof AndroDroid);
     }
 
     @Test
     public void testCreateR2D2() {
-        assertTrue(droidFactory.createDroid(DroidModel.R2_D2) instanceof Droid);
+        assertTrue(abstractFactory.createDroid(DroidModel.R2_D2) instanceof Droid);
     }
 }
