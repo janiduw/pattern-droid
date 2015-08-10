@@ -1,6 +1,5 @@
 package janiduw.com.patterndroid.droid;
 
-import janiduw.com.patterndroid.droid.IDroid;
 import janiduw.com.patterndroid.observer.DroidObserver;
 
 /**

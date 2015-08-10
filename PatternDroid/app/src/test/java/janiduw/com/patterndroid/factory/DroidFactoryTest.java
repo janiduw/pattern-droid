@@ -1,12 +1,10 @@
-package janiduw.com.patterndroid;
+package janiduw.com.patterndroid.factory;
 
 import org.junit.Before;
 import org.junit.Test;
 
 import janiduw.com.patterndroid.droid.AndroDroid;
 import janiduw.com.patterndroid.droid.Droid;
-import janiduw.com.patterndroid.factory.DroidFactory;
-import janiduw.com.patterndroid.factory.DroidModel;
 
 import static org.junit.Assert.assertTrue;
 
